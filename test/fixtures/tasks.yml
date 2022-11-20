@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  deathline: 2022-11-20 14:16:20
+  notify: false
+
+two:
+  name: MyString
+  description: MyText
+  deathline: 2022-11-20 14:16:20
+  notify: false
