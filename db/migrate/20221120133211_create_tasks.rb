@@ -5,6 +5,7 @@ class CreateTasks < ActiveRecord::Migration[7.0]
       t.text :description
       t.datetime :deathline
       t.boolean :notify
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end

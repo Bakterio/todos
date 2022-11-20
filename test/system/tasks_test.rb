@@ -18,6 +18,7 @@ class TasksTest < ApplicationSystemTestCase
     fill_in "Description", with: @task.description
     fill_in "Name", with: @task.name
     check "Notify" if @task.notify
+    fill_in "User", with: @task.user_id
     click_on "Create Task"
 
     assert_text "Task was successfully created"
@@ -32,6 +33,7 @@ class TasksTest < ApplicationSystemTestCase
     fill_in "Description", with: @task.description
     fill_in "Name", with: @task.name
     check "Notify" if @task.notify
+    fill_in "User", with: @task.user_id
     click_on "Update Task"
 
     assert_text "Task was successfully updated"
