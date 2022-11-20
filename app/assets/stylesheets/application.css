@@ -8,3 +8,22 @@
 #user_dropdown > * {
     width: 100%;
 }
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.in_line {
+    align-items: center;
+    display: flex;
+}
+
+.in_line > *{
+    display: inline-flex;
+    flex-direction: column;
+    margin-right: 5px;
+}
