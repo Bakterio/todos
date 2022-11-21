@@ -3,19 +3,23 @@
 <div class="in_line">
   <h1>Tasks</h1>
   <span><%= button_to "create", new_task_path, class: "material-symbols-outlined btn btn-primary", method: :get%></span>
+  <%= render "tasks/search_form" %>
+  Tasks done: <%= current_user.tasks_done_percentage %>
 </div>
 
 <div id="tasks">
   <table class="table">
   <tr class="table-primary">
     <th>Name</th>
+    <th>Description</th>
     <th>Deathline</th>
     <th>Done</th>
     <th></th>
   </tr>
-  <% current_user.tasks.each do |task| %>
+  <% @tasks.each do |task| %>
     <tr>
       <td><%= link_to task.name, task %></td>
+      <td><%= task.description.first(20) %></td>
       <td><%= task.deathline %></td>
       <td><%= task.done %></td>
 

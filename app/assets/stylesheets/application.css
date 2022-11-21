@@ -22,8 +22,8 @@
     display: flex;
 }
 
-.in_line > *{
+.in_line > * {
     display: inline-flex;
     flex-direction: column;
-    margin-right: 5px;
+    margin-right: 10px;
 }
