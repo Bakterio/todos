@@ -14,7 +14,7 @@ class TasksTest < ApplicationSystemTestCase
     visit tasks_url
     click_on "New task"
 
-    fill_in "Deathline", with: @task.deathline
+    fill_in "deadline", with: @task.deadline
     fill_in "Description", with: @task.description
     fill_in "Name", with: @task.name
     check "Notify" if @task.notify
@@ -29,7 +29,7 @@ class TasksTest < ApplicationSystemTestCase
     visit task_url(@task)
     click_on "Edit this task", match: :first
 
-    fill_in "Deathline", with: @task.deathline
+    fill_in "deadline", with: @task.deadline
     fill_in "Description", with: @task.description
     fill_in "Name", with: @task.name
     check "Notify" if @task.notify

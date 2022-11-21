@@ -3,7 +3,7 @@ class CreateTasks < ActiveRecord::Migration[7.0]
     create_table :tasks do |t|
       t.string :name
       t.text :description
-      t.datetime :deathline
+      t.datetime :deadline
       t.boolean :notify
       t.references :user, null: false, foreign_key: true
 
