@@ -20,7 +20,7 @@
     <tr>
       <td><%= link_to task.name, task %></td>
       <td><%= task.description.first(20) %></td>
-      <td><%= task.deadline %></td>
+      <td><%= task.deadline.strftime("%M:%H %d.%m.%Y") %></td>
       <td><%= task.done %></td>
 
       <td>
