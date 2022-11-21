@@ -24,12 +24,13 @@
       <td><%= task.done %></td>
 
       <td>
+        <span class="material-symbols-outlined"><%= button_to "edit", edit_task_path(task), method: :get, class: "btn btn-primary" %></span>
         <% if task.done %>
           <span class="material-symbols-outlined"><%= button_to "undo", task_path(task, task: { done: false }), method: :put, class: "btn btn-secondary" %></span>
         <% else %>
           <span class="material-symbols-outlined"><%= button_to "done", task_path(task, task: { done: true }), method: :put, class: "btn btn-secondary" %></span>
         <% end %>
-        <span class="material-symbols-outlined"><%= button_to "delete", task_path(task), method: :delete, class: "btn btn-secondary" %></span>
+        <span class="material-symbols-outlined"><%= button_to "delete", task_path(task), method: :delete, class: "btn btn-danger" %></span>
       </td>
 
     </tr>
