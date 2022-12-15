@@ -25,6 +25,7 @@ class TasksController < ApplicationController
   def create
     task = params[:task]
     @task = Task.new(name: task[:name], description: task[:description], deadline: task[:deadline], notify: task[:notify], user_id: current_user.id)
+    TaskMailer.with(user: current_user).task_created.deliver_later
 
     respond_to do |format|
       if @task.save
